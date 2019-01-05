@@ -2,7 +2,7 @@ from typing import Dict
 
 import RPi.GPIO as GPIO
 
-from utils import *
+from .utils import *
 
 # This will be a full HAL for the drv8833 driver circuit by texas instruments for rpis
 # specifically the pcb made by adafruit although others would probably work
@@ -11,7 +11,7 @@ from utils import *
 # Speed = Duty Cycle
 # Torque ~= Frequency
 # lower freq == more torque for standard dc motors
-from utils import Pins
+from .utils import Pins
 
 
 # noinspection PyPep8Naming
