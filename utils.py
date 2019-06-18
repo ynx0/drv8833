@@ -21,9 +21,12 @@ class Direction(Enum):
 
 
 # simple typedef kinda thing
-class Motor(NamedTuple):
-    pin1: GPIO.PWM
-    pin2: GPIO.PWM
+# from https://stackoverflow.com/a/42002613, use backwards compat syntax until python3.5+ is avail on pi
+# class Motor(NamedTuple):
+#     pin1: GPIO.PWM
+#     pin2: GPIO.PWM
+
+Motor = NamedTuple('Motor', [('pin1', GPIO.PWM), ('pin2', GPIO.PWM)])
 
 
 def stop(pwm: GPIO.PWM):
