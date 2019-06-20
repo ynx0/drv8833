@@ -100,9 +100,9 @@ class DRV8833:
 
         # all pin objects correspond to the names in the `Pins` enum
         self.AIN1 = GPIO.PWM(pinmap.get(Pins.AIN1), freqmap.get(Pins.AIN1))
-        self.AIN2 = GPIO.PWM(pinmap.get(Pins.AIN1), freqmap.get(Pins.AIN2))
-        self.BIN1 = GPIO.PWM(pinmap.get(Pins.AIN1), freqmap.get(Pins.BIN1))
-        self.BIN2 = GPIO.PWM(pinmap.get(Pins.AIN1), freqmap.get(Pins.BIN2))
+        self.AIN2 = GPIO.PWM(pinmap.get(Pins.AIN2), freqmap.get(Pins.AIN2))
+        self.BIN1 = GPIO.PWM(pinmap.get(Pins.BIN1), freqmap.get(Pins.BIN1))
+        self.BIN2 = GPIO.PWM(pinmap.get(Pins.BIN2), freqmap.get(Pins.BIN2))
 
         # set duty cycle to 0
         # duty cycle must be 0.0 <= x <= 100.0
